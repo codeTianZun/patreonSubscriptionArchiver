@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# Logs and exports
+*.log
+*.csv
+*.json
+!package.json
+
+# Local env
+.env
+.env.*
+node_modules/
