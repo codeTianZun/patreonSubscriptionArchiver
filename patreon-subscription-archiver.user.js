@@ -2,7 +2,7 @@
 // @name         Patreon Subscription File Archiver
 // @name:zh-CN   Patreon 订阅文件归档器
 // @namespace    https://github.com/CodeTianZun
-// @version      1.1.0
+// @version      1.1.1
 // @description  Resumably archive accessible Patreon files with dated names, monthly-first copies, persistent checkpoints, and network recovery.
 // @description:zh-CN  可断点续传地归档有权访问的 Patreon 文件，按日期命名，保存每月首个副本，并支持持久化进度与断网恢复。
 // @author       CodeTianZun
@@ -1534,6 +1534,8 @@
   function sanitizeSegment(value, maxLength = 80) {
     const cleaned = String(value ?? '')
       .normalize('NFKC')
+      // emoji 及修饰符编码为唯一码点文本（如 🎵 → U1F3B5），替代符号替换以保证合法且不重复
+      .replace(/[\p{Extended_Pictographic}\p{Emoji_Modifier}\p{Regional_Indicator}\p{Variation_Selector}\u{200D}\u{20E3}\u{E0020}-\u{E007F}]/gu, (char) => `U${char.codePointAt(0).toString(16).toUpperCase()}`)
       .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '_')
       .replace(/\s+/g, ' ')
       .replace(/[. ]+$/g, '')

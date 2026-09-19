@@ -9,7 +9,7 @@
 面向任意 Patreon 创作者页面的通用油猴脚本
 
 [![安装](https://img.shields.io/badge/Install-Userscript-2ea44f?style=for-the-badge&logo=tampermonkey&logoColor=white)](https://raw.githubusercontent.com/CodeTianZun/patreonSubscriptionArchiver/main/patreon-subscription-archiver.user.js)
-[![版本](https://img.shields.io/badge/version-1.1.0-2ea44f?style=for-the-badge)](https://github.com/CodeTianZun/patreonSubscriptionArchiver)
+[![版本](https://img.shields.io/badge/version-1.1.1-2ea44f?style=for-the-badge)](https://github.com/CodeTianZun/patreonSubscriptionArchiver)
 [![许可证](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](./LICENSE)
 
 ![Tampermonkey](https://img.shields.io/badge/Tampermonkey-userscript-f7a41d?style=for-the-badge&logo=tampermonkey&logoColor=white)
